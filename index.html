@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Knowledge Globe</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow:400,400i,500,500i,600,600i,700,700i|Archivo:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+            </script>
+            <![endif]-->
+        <meta name="description" content="Knowledge Globe, a.k.a. KnoGlo, is a powerful tool to analyze and visualize the distribution of research interests for the selected topic and year. You can see how these research interests distributed by subjects, keywords, countries, publishers, and publication types.">
+    </head>
+
+    <body>
+        <nav>
+<!--            <strong>Knowledge Globe</strong> / dataset preview (beta) / how we do it? / update history / blog / contact us-->
+            <ul>
+                <li><a href="index.html"><img src="assets/KnoGlo.png" class="icon" width=100></a></li>
+                <li><a href="visualizations.html">visualizations</a></li>
+                <li><a href="how-this-works.html">how this works?</a></li>
+                <li><a href="dataset-examples.html">dataset examples</a></li>
+                <li><a href="source-codes.html">source codes</a></li>
+                <li><a href="our-vision.html">our vision</a></li>
+                <li><a href="contact-us.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="page">
+            <img src="assets/KnowledgeGlobe.png" class="logo" style="padding-top: 25pt;  padding-bottom: 25pt" width=500>
+            <h1 class="large-title">
+                See how researchers around the world leading the evolution of knowledge.<br>No matter when and where.
+            </h1>
+            <p>
+                We present a new way to see how knowledge evolves by looking at what researchers around the world put their effort on specific industries in a range of time.
+            </p>
+            <p>
+                By looking for what people were thinking and doing academically and professionally, we could observe the evolution in specific areas of study, and even how this world changes from a global and historical perspective.
+            </p>
+            <hr>
+            <p class="paragraph-head">
+                <strong>Introducing <strong class="extreme-highlight">Knowledge Globe </strong>(KnoGlo),</strong> a powerful tool to <strong>analyze and visualize</strong> the distribution of research interests for the selected topic and year. You can see how these research interests distributed by <strong>subjects, keywords, countries, publishers, and publication types.</strong>
+            </p>
+<!--
+            <dir class="numbers-group">
+                <dir class="number-and-caption">
+                    <p class="number"><strong>A.D. 1636</strong></p>
+                    <p class="number-caption">Harvard University is the oldest university in the United States, established in the year 1636.</p>
+                </dir>
+                <dir class="number-and-caption">
+                    <p class="number"><strong>≈ 5,300</strong></p>
+                    <p class="number-caption">As of 2015, there are 5,300 colleges and universities in the United States.</p>
+                </dir>
+            </dir>
+-->
+            <h2>
+                If you ask...
+            </h2>
+            <ul>
+                <li>"In which country, researchers show more interests and put efforts on the field of the Internet?"</li>
+                <li>"In the United States, when did Social Media start to be mentioned in publications?"</li>
+                <li>"How many articles about LGBTQ was published, compare with 1965 and 2015?"</li>
+                <li>"What kind of specific topics (subjects/keywords) do researchers focused on 
+in the field of digital media in 2017?"</li>
+            </ul>
+            <p>
+                KnoGlo will answer your question in an intuitive way by delivering several types of <strong>data visualizations</strong>.
+            </p>
+            <hr>
+            <h2>Where are the data come from?</h2>
+            <p>
+                Our tool is able to gather information from <strong>Springer Nature</strong>, which is one of the world's leading scholar database.
+            </p>
+            <p class="paragraph-head">
+                Powered by <strong class="extreme-highlight">Springer Nature metadata API</strong> that provides <strong>metadata for academic and professional publications,</strong> we could access 12 million online documents, including journal articles, book chapters, and protocols.
+            </p>
+            <p>
+                Using these data, we could analyze the statistic information about how many articles published in selected topic and time ranges.
+            </p>
+            <hr>
+            <h2 class="h2-mid-text">TOOLS WE USED</h2>
+            <dir class="numbers">
+                <dir class="number-and-caption centered-numbers">
+                    <p class="number"><strong>Python</strong></p>
+                    <p class="number-caption">For both gathering data from Springer and making datasets in CSV format.</p>
+                </dir>
+                <dir class="number-and-caption centered-numbers">
+                    <p class="number"><strong>LibreOffice</strong></p>
+                    <p class="number-caption">Merge multiple datasets into one for specific uses.</p>
+                </dir>
+                <dir class="number-and-caption centered-numbers">
+                    <p class="number"><strong>R</strong></p>
+                    <p class="number-caption">Create graphs for data visualization and publication in rbokeh.</p>
+                </dir>
+            </dir>
+            <p>How exactly do we implement? <a href="how-this-works.html">See in action.</a></p>
+            <hr>
+            <p class="paragraph-head">
+                By observing the history of academics and <strong>see how researchers from all over the world drive the development of everything and making impacts,</strong> KnoGlo will help us to <strong>make predictions, observe today's changing world, and shape our future.</strong>
+            </p>
+            <button class="highlight-button centered" onclick="location.href='visualizations.html'">visualization examples</button>
+        </div>
+    </body>
+    
+    <footer>
+        &copy; 2018 Knowledge Globe. All rights reserved.
+        <br>
+        <a href="https://www.junshuliu.com">Junshu Liu</a>,
+        <a href="https://www.tharsen.net">Jeffrey R. Tharsen</a>, <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.
+        <hr>
+        <a href="contact-us.html">Contact Us</a>
+    </footer>
+</html>

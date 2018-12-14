@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Knowledge Globe</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow:400,400i,500,500i,600,600i,700,700i|Archivo:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+            </script>
+            <![endif]-->
+        <meta name="description" content="This is the Eye of Higher Education.">
+        <style>
+        </style>
+    </head>
+
+    
+    <body>
+        <nav>
+<!--            <strong>Knowledge Globe</strong> / dataset preview (beta) / how we do it? / update history / blog / contact us-->
+            <ul>
+                <li><a href="index.html"><img src="assets/KnoGlo.png" class="icon" width=100></a></li>
+                <li><a href="visualizations.html">visualizations</a></li>
+                <li><strong><a href="how-this-works.html">how this works?</a></strong></li>
+                <li><a href="dataset-examples.html">dataset examples</a></li>
+                <li><a href="source-codes.html">source codes</a></li>
+                <li><a href="our-vision.html">our vision</a></li>
+                <li><a href="contact-us.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="page">
+            <h1 class="large-title">
+                How do KnoGlo works?
+            </h1>
+            <p>
+                Gather and create data. Data management. Data visualization.
+            </p>
+            <hr>
+            <p class="paragraph-head">
+                Our goal is to create <strong>datasets of the statistics of academic publications from all over the world,</strong> manage, and visualize them.
+            </p>
+            <hr>
+            <h2>Where to get the data?</h2>
+            <p>
+                Our tool is able to gather information from Springer, which is one of the world's leading scholar database. Powered by Springer Nature metadata API that provides metadata for academic and professional publications, we could access 12 million online documents, including journal articles, book chapters, and protocols. Using these data, we could analyze the statistic information about how many articles published in selected topic and time ranges.
+            </p>
+            <p>See how the <a href="index.html">raw data</a> output looks like, with the example of output</p>
+            <hr>
+            <h2>How to get the data? (research challenge)</h2>
+            <p class="paragraph-head">
+                First things first, of course, we need to <strong class="extreme-highlight">get the data</strong> from <strong>Springer Nature.</strong>
+            </p>
+            
+            <p>
+                This is also my major research challenge. Springer Nature Metadata API provides raw data in JSON format. We build a tool in Python, which could gather the data from the JSON raw data filtered by topic and year.
+            </p>
+            <img class="centered-images large-image" src="assets/screenshots/python.png">
+            <p>
+                The JSON data consists of several sets of data, including one that we need to use, which is “facets”. It includes the statistical data shows how many articles were published for each subject, keyword, country, publisher, and type (books or journals). In other words, we need to process the data from these six attributes in “facets”. Inside each attribute, there are two types of variables: “count” and “value”. “Count” represents the number of publications associated with each “value”.
+            </p>
+            <p>
+                <strong>REQUIREMENT</strong> - In order to test KnoGlo by yourself, you need to request a Springer Nature API Key. <a href="https://dev.springernature.com/">Learn more</a> about Springer Nature API and how to get your unique key.
+            </p>
+            <p class="paragraph-head">
+                Another research challenge is how to <strong class="extreme-highlight">organize these data</strong><strong>.</strong>
+            </p>
+            <p>
+                After gathering data, the Python tool will create 6 datasets for each element in “facets”. The dataset consists in two columns, “count” and “value”. For each attribute, the Python tool will make two lists for “count” and “value” and then generate a CSV file. Each column contains data for each list.
+            </p>
+            <p class="dialogue">
+                Big thanks to Lanfei Liu, who built a <a href="http://github.com/lanfeiliu/SpringerAPI-ElsevierAPI_LiteratureReviewTable">tool</a> in Python using Springer Metadata API and other APIs in order to generate literature review data.
+                By learning her code, I figured out how to gather data from the Springer metadata JSON output using Python with filters (query), manage these data, and create &amp; write CSV files by columns.
+            </p>
+            <p>Take a look at Knoglo's <a href="">Python</a> code.</p>
+            <hr>
+            <h2>How to manage data?</h2>
+            <p class="paragraph-head">
+                For specific cases, we would like to <strong class="extreme-highlight">make comparisons</strong> between years and see how the number changes.
+            </p>
+            <p>
+                For example, to see the change in the number of publications about the computer from several countries between 1988 and 2018 (per 5 years). After we created the dataset for 1988, 1993, 1998, 2003, 2008, 2013, and 2018, we’d like to merge these seven datasets in one. We can implement this using LibreOffice by creating a query.
+            </p>
+            <img class="centered-images large-image" src="assets/screenshots/query-design-view.png">
+            <img class="centered-images large-image" src="assets/screenshots/query-merged.png">
+            <hr>
+            <h2>How to visualize data?</h2>
+            <p class="paragraph-head">
+                Once we have the data, we can visualize it as graphs using <strong class="extreme-highlight">R</strong> programming language, which could tell you the results in an intuitive way and even tell you stories in a selected time and space.
+            </p>
+            <p>
+                See our <a href="visualizations.html">visualization examples</a>, and take a look at Knoglo's <a href="">R</a> code.
+            </p>
+            <hr>
+        </div>
+    </body>
+    
+    <footer>
+        &copy; 2018 Knowledge Globe. All rights reserved.
+        <br>
+        <a href="https://www.junshuliu.com">Junshu Liu</a>,
+        <a href="https://www.tharsen.net">Jeffrey R. Tharsen</a>, <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.
+        <hr>
+        <a href="contact-us.html">Contact Us</a>
+    </footer>
+</html>
