@@ -15,4 +15,4 @@
                 <strong>Introducing <strong class="extreme-highlight">Knowledge Globe </strong>(KnoGlo),</strong> a powerful tool to <strong>analyze and visualize</strong> the distribution of research interests for the selected topic and year. You can see how these research interests distributed by <strong>subjects, keywords, countries, publishers, and publication types.</strong>
             </p>
 
-<p>Learn more at<a href="tinyurl.com/knoglo">tinyurl.com/knoglo</a></p>
+<p>Learn more at <a href="tinyurl.com/knoglo">tinyurl.com/knoglo</a></p>
