@@ -90,7 +90,8 @@ dev.off()
 # install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(country, aes(x = value, y = count)) + xlab("Countries") + ylab("Number of publications") + ggtitle(paste('Quantities of publications about digital arts for each countries in 2017'))
+# ggplot(country, aes(x = value, y = count)) + xlab("Countries") + ylab("Number of publications") + ggtitle(paste('Quantities of publications about digital arts for each countries in 2017'))
+# This one does not work properly. I'm currently working on it.
 
 # R bokeh
 # Learn more at http://hafen.github.io/rbokeh
@@ -103,7 +104,7 @@ p <- figure(width = 1000, height = 600) %>%
   x_axis(angle = 45)
 p
 
-# this looks better
+# this looks better. I swapped the x and y axis.
 p1 <- figure(width = 1000, height = 600) %>%
   ly_points(count, value, data = country,
             color = value, glyph = value,
