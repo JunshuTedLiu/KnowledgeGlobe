@@ -1,4 +1,4 @@
-setwd("~/OneDrive/Master Term 2 Autumn 2018/Knowledge Globe/source-code/Analysis & Visualization")
+setwd("~/Documents/GitHub/KnowledgeGlobe/source-code/Analysis-and-Visualization")
 
 # Save CSV tables
 
@@ -20,7 +20,7 @@ yearInput
 # 0. subject
 
 # Bar Plot
-par(mar=c(12,4,4,1))
+par(mar=c(12,4,4,1)) # apply margins since the name will be so long
 xcor <- barplot(subject$count, main = paste("Subjects of publications about", topicInput, "in", yearInput), names.arg=c(subject$value), las = 2, cex.names = 0.6)
 text(x = xcor, y = subject$count, label = subject$count, pos = 3, cex = 0.8, col = "red")
 dev.off()
@@ -70,28 +70,26 @@ lbls2 <- paste(lbls2, pct2) # add percents to labels
 lbls2 <- paste(lbls2,"%",sep="") # ad % to labels
 pie(slices2,labels = lbls2, col=rainbow(length(lbls2)), main="Types of publications about ", topicInput, " in ", yearInput)
 
+dev.off()
+
 # put everything together in one place.
-par(mfrow = c(3,2))
+# (Need to fix the margin problem)
+par(mfrow = c(2,2))
 # be sure to run the code above.
 # 0. subject
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Subjects of publications about digital arts in 2017")
+xcor <- barplot(subject$count, main = paste("Subjects of publications about", topicInput, "in", yearInput), names.arg=c(subject$value), las = 2, cex.names = 0.6)
+text(x = xcor, y = subject$count, label = subject$count, pos = 3, cex = 0.8, col = "red")
 # 1. keyword
-pie(slices1,labels = lbls1, col=rainbow(length(lbls1)), main="Keywords of publications about digital arts in 2017")
+xcor1 <- barplot(keyword$count, main = c("Keywords of publications about ", topicInput, " in ", yearInput), names.arg=c(keyword$value), las = 2)
+text(x = xcor1, y = keyword$count, label = keyword$count, pos = 3, cex = 0.8, col = "red")
 # 2. pub
-barplot(pub$count, main = "Publishers of the journals about digital arts in 2017", names.arg=c(pub$value), col=rainbow(20, start=.7, end=.1), las = 2, cex.names = 0.9)
+barplot(pub$count, main = c("Publishers of the journals about ", topicInput, " in ", yearInput), names.arg=c(pub$value), col=rainbow(20, start=.7, end=.1), las = 2, cex.names = 0.9)
 # 4. country
-barplot(country$count, main = "Quantities of publications about digital arts for each countries in 2017", names.arg=c(country$value), las = 2)
-# 5. type
-pie(slices2,labels = lbls2, col=rainbow(length(lbls2)), main="Types of publications about computer in 2017")
+barplot(country$count, main = c("Quantities of publications about ", topicInput, " for each countries in ", yearInput), names.arg=c(country$value), las = 2)
 
 dev.off()
 
 # now, let's make something fancy!
-# install.packages("ggplot2")
-library(ggplot2)
-
-# ggplot(country, aes(x = value, y = count)) + xlab("Countries") + ylab("Number of publications") + ggtitle(paste('Quantities of publications about digital arts for each countries in 2017'))
-# This one does not work properly. I'm currently working on it.
 
 # R bokeh
 # Learn more at http://hafen.github.io/rbokeh
@@ -111,3 +109,7 @@ p1 <- figure(width = 1000, height = 600) %>%
             hover = list(count, value)) %>%
   theme_legend(background_fill_alpha = 0.25)
 p1
+
+# Future updates: ggplot
+# install.packages("ggplot2")
+library(ggplot2)
