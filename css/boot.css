@@ -1,0 +1,121 @@
+#main {
+  background-color: blanchedalmond;
+}
+
+/*
+.row {
+  font-size: xx-large;
+}
+*/
+
+/* Here's how you use a wildcard match
+in CSS. For more information, see this
+stackoverflow answer.
+https://stackoverflow.com/questions/5110249/wildcard-in-css-for-classes */
+div[class*=align-items-] {
+  height: 200px;
+}
+
+img {
+  width: 800px;
+}
+
+.card-img-top {
+  width: 300px;
+}
+
+/*
+p {
+  font-size: large;
+}
+*/
+
+/* Here I change the default behavior
+of these built in Bootstrap typography
+classes to make them resize responsively. */
+.display-3 {
+  font-size: 7vmin;
+}
+
+/*
+.lead {
+  font-size: 3vmin;
+}
+*/
+
+/*# sourceMappingURL=boot.css.map */
+.navbar-custom {
+/*    background-color: #1E007E;*/
+          animation: colorchange 5s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 5s infinite; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+    {
+      0%   {background: #1E007E;}
+      50%  {background: #A40032;}
+      100% {background: #1E007E;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: #1E007E;}
+      50%  {background: #A40032;}
+      100% {background: #1E007E;}
+    }
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link {
+    color: #FFAB00;
+}
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-custom .navbar-toggler {
+    background-color: transparent;
+    border: 1px solid white;
+    
+}
+
+.navbar-toggler-icon {
+  background-image: url(../assets/white-hamburger.png);
+}
+
+.bg-footer {
+    background-color: #696969;
+}
+
+.bg-footer a {
+    color: #FFAB00;
+}
+
+blockquote {
+    color: #A40032;
+}
+
+.lead strong {
+    font-weight: bold;
+}
+
+.focus {
+    font-size: 1.75em;
+}
+
+a {
+    color: #3100CF;
+}
+
+a:hover {
+    color: #EF0048; 
+}

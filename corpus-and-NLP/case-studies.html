@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Additional stylesheet link goes here -->
+    <link rel="stylesheet" type="text/css" href="/css/boot.css">
+    <title>Case Studies - Corpus &amp; NLP - Knowledge Globe</title>
+
+    <script>
+        $(document).ready(function() {
+            $(".dropdown-toggle").dropdown();
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
+            <img src="/assets/knoglo2white.png" class="align-top" style="width: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                    <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#schedule" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Statistical Metadata Visualization</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="stat-metadata-visual/how-to-use.html">How to Use?</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/case-studies.html">Visualization Case Studies</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/implementation.html">Implementation &amp; Source Code</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/try-online.html">Web Version</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#schedule" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Corpus Generator &amp; NLP Analysis</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="corpus-and-NLP/how-to-use.html">How to Use?</a>
+                        <a class="dropdown-item" href="corpus-and-NLP/case-studies.html">Case Studies</a>
+                        <a class="dropdown-item" href="corpus-and-NLP/implementation.html">Implementation &amp; Source Code</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="who-cares.html">Who Cares?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-knoglo.html">About KnoGlo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+<!--
+    <div class="jumbotron" style="margin-top: 140px;">
+  <h1>Who cares?</h1>      
+</div>
+-->
+    
+    <div style="margin-top: 140px;">
+        <h4 class="container-fluid">Corpus Generator &amp; NLP Analysis</h4>
+        <hr>
+    </div>
+    
+    <div class="jumbotron jumbotron-fluid" style="background-color: #ffffff">
+        <div class="container" style="">
+        <h2 class="display-2">Case Studies.</h2>
+<!--        <hr>-->
+            <p class="lead">See KnoGlo's corpus generator and NLP analysis tool in action, and what those results mean to us.</p>
+
+    </div>
+    </div>
+    
+
+       
+    
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>Example 1. See how the Internet evolves in the past 50 years.</h2>
+            <p class="lead">Keyword "Internet", "ARPANET", and other related. Year from 1969 to 2019. 5 years as a gap.</p>
+            <hr>
+            <h5>Generating Corpus</h5>
+            <p>There are 55 text documents inside the <a href="../source-code/Corpus-Generator-and-NLP/Corpus%2520Examples/Corpus%20Example%201%20-%20Computer%20and%20Internet/">corpus</a>. For each document, there are up to 50 titles and abstracts about a selected topic published in a specific year.</p>
+            <p>For this research, I picked several keywords and a time range of 1969-2019 (5 years as a gap). Selected keywords include “Internet”, “ARPANET”, “computer network”, “computer”, and “World Wide Web”.</p>
+            <p>When I am making the corpus, I found something interesting that there are NO results for the “World Wide Web” until 1994.</p>
+            <h5>NLP Topic Modeling</h5>
+            <p>I did a few attempts on the number of topics. When I increased the number of topics, while the word cloud seems like could provide more results of the top N word, some of them are constantly repeating between topics. 4 topics return a fairly satisfying result in this case.</p>
+            <p>View the complete topic modeling result with 4 topics by running <a href="../source-code/Corpus-Generator-and-NLP/NLP%20Topic%20Modeling%20Example%201.ipynb">this IPYNB file</a> in Jupyter Notebook.</p>
+            <p class="small">This file has the output results for the Example 1. Do not re-run the code, or the old results will be overwritten.</p>
+            <p>Note: after changing the topic number, be sure to change the row and columns for the distribution of word counts by dominant topic, word cloud, and word count &amp; importance of topic keywords to match your topic numbers (i.e., 9 topics with a 3x3 visualization).</p>
+            <h5>Compare with Statistical Metadata Results</h5>
+            <p>We can compare the result of topic modeling from our corpus and the original subject and keyword tags from Springer. Although the topic modeling results might not contain everything that is included in Springer’s tags since my free API plan only allows me to get 50 titles and abstracts for each text file, we can find some topics share in common, like the “Medicine &amp; Health” subject tag correlated to the top N words, such as “protein”, “gene”, and “cell”, in one of the topics from the topic modeling result.</p>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>Example 2. Medicine in Japan.</h2>
+            <p class="lead">Keyword "medicine". Country "Japan". Year from 1989 to 2019. 5 years as a gap.</p>
+            <hr>
+<!--            <p>Japan is one of the countries that is leading the medicine industry.</p>-->
+            <p>Coming soon. Please check back later.</p>
+        </div>
+    </div>
+
+    <footer class="bg-footer text-white d-none d-lg-block p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col small">
+
+
+                    <!--                    <img src="assets/knowledgeglobe2white.png" class="align-top" style="width: 200px;">-->
+                    <span>&copy; 2018-2019 Knowledge Globe. All rights reserved.</span>
+                    <br>
+                    <span>Created by <a href="https://junshuliu.com">Junshu Liu</a>. Advised by <a href="https://ochre.uchicago.edu/directory/david-schloen">David Schloen</a>, <a href="http://tharsen.net/">Jeffrey Tharsen</a>, and <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.</span>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Additional JS goes here -->
+</body>
+
+</html>

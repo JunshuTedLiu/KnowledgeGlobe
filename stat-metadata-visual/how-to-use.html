@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Additional stylesheet link goes here -->
+    <link rel="stylesheet" type="text/css" href="/css/boot.css">
+    <title>How to Use? - Statistical Visualization - Knowledge Globe</title>
+
+    <script>
+        $(document).ready(function() {
+            $(".dropdown-toggle").dropdown();
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
+            <img src="/assets/knoglo2white.png" class="align-top" style="width: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                    <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#schedule" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Statistical Metadata Visualization</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="stat-metadata-visual/how-to-use.html">How to Use?</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/case-studies.html">Visualization Case Studies</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/implementation.html">Implementation &amp; Source Code</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/try-online.html">Web Version</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#schedule" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Corpus Generator &amp; NLP Analysis</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="corpus-and-NLP/how-to-use.html">How to Use?</a>
+                        <a class="dropdown-item" href="corpus-and-NLP/case-studies.html">Case Studies</a>
+                        <a class="dropdown-item" href="corpus-and-NLP/implementation.html">Implementation &amp; Source Code</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="who-cares.html">Who Cares?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-knoglo.html">About KnoGlo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+<!--
+    <div class="jumbotron" style="margin-top: 140px;">
+  <h1>Who cares?</h1>      
+</div>
+-->
+    
+    <div style="margin-top: 140px;">
+        <h4 class="container-fluid">Statistical Metadata Visualization</h4>
+        <hr>
+    </div>
+    
+    <div class="jumbotron jumbotron-fluid" style="background-color: #ffffff">
+        <div class="container" style="">
+        <h2 class="display-2">How to Use?</h2>
+<!--        <hr>-->
+            <p class="lead">Get your API key. Create your datasets. Visualize them. Done.</p>
+
+    </div>
+    </div>
+    
+
+       
+    
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>Step 1. Get API key.</h2>
+<!--            <p class="lead">For free.</p>-->
+            <hr>
+            <p>Visit <a href="https://dev.springernature.com/" target="_blank">Springer Nature API Portal</a> to get a free API key. Using an educational email address is recommended.</p>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>Step 2. Create Datasets.</h2>
+            <p class="lead">Using our Python 2 tool to get the statistics of the publications with selected keyword and year.</p>
+            <hr>
+            <p>➊ Download KnoGlo tool here. You can also download or clone our repository.</p>
+            <p>➋ Prepare for the workspace to run Python. For example, on Mac, set the current file path to the "source-code/Statistical-Metadata-Visualization/Python-and-R" folder by using "cd" command in Terminal. For example,</p>
+            <p><code>cd mypath/source-code/Statistical-Metadata-Visualization/Python-and-R</code></p>
+            <p>➌ Run the dataset generator. If you want to filter by keyword only, run "KnoGlo-Dataset-Generator-keyword.py" by using this command:</p>
+            <p><code>python2 KnoGlo-Dataset-Generator-keyword.py</code></p>
+            <p>If you want to filter by both keyword and year, run this one:</p>
+            <p><code>python2 KnoGlo-Dataset-Generator-keyword-and-year.py</code></p>
+            <p>➍ KnoGlo dataset generator will first ask you to say a keyword as a topic of your choice. It could be a single word or phase.</p>
+            <p>➎ If applicable, enter a year for the publications that you'd like to see.</p>
+            <p>➏ Enter your Springer Nature API key. Press <kbd>enter</kbd> or <kbd>return</kbd> to start generate files.</p>
+            <p>Each time when you run this tool, it will generate six dataset files in CSV format that includes the statistics for all six constraints. All these files will be saved into a new folder named by your keyword (and year, if applicable).</p>
+            <p class="small">A raw JSON output file will also be saved in the same folder in TXT format. This file includes your API key, so please <strong>do not share this file</strong> to the public.</p>
+        </div>
+    </div>
+    
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>Step 3. Visualize your Datasets.</h2>
+            <p class="lead">After you get your dataset generated, visualize them in graphs.</p>
+            <hr>
+            <p>KnoGlo includes a visualization tool in R.</p>
+            <p>➊ <a href="https://www.rstudio.com/products/rstudio/download/">Download</a> RStudio. You just need the FREE version of RStudio Desktop with Open Source License. Install it on your computer</p>
+            <p>➋ Go to the "source-code/Statistical-Metadata-Visualization/Python-and-R" folder. Open the visualization tool, "KnoGlo-Visualization.R", in RStudio.</p>
+            <p>➌ Look at line 1. Set the directory to the folder that includes the dataset files that you want to visualize. Just type that folder name. For example,</p>
+            <p><code>setwd("keyword_computer_year_1988")</code></p>
+            <p class="small">When you opened this R tool, RStudio will automatically load the workspace from the current folder "Python-R" where this R tool is located, which is the same folder where all your datasets folders are being saved.</p>
+            <p> Run line 1.
+            <p>➍ Now, run line 8 to 13 to store all information from your dataset to these six variables.</p>
+            <p>➎ Run line 15. It will ask you the keyword that you've used for your datasets. Input the exact same keyword here.</p>
+            <p>➏ If applicable, run line 18. It will ask you the year. Input the same thing. If you don't have a year constraint, you can type something like "all time" or "anytime", so the titles in the visualization will looks better, such as "Subjects of publications about medicine <strong>in</strong> anytime".</p>
+            <p>➐ Now, you are ready to visualize! Run line 26 to see a bar plot of the subjects of publications about your keyword (in a year range, if applicable). Here is an example:</p>
+            <img src="../source-code/Statistical-Metadata-Visualization/Python-and-R/keyword_computer_year_1988/subject-plot.png" class="w-75 mb-3">
+            <p>➑ Before you run line 29 <code>dev.off</code>, don't forget to save your bar plot by pressing the "export" button on the top of the graph view. You can save it in PDF or as an image.</p>
+            <p>Same thing, run the rest of codes for other constraints.</p>
+            <p>Have fun visualizing!</p>
+        </div>
+    </div>
+
+    <footer class="bg-footer text-white d-none d-lg-block p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col small">
+
+
+                    <!--                    <img src="assets/knowledgeglobe2white.png" class="align-top" style="width: 200px;">-->
+                    <span>&copy; 2018-2019 Knowledge Globe. All rights reserved.</span>
+                    <br>
+                    <span>Created by <a href="https://junshuliu.com">Junshu Liu</a>. Advised by <a href="https://ochre.uchicago.edu/directory/david-schloen">David Schloen</a>, <a href="http://tharsen.net/">Jeffrey Tharsen</a>, and <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.</span>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Additional JS goes here -->
+</body>
+
+</html>

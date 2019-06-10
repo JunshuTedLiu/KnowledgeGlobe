@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualizations - Knowledge Globe</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow:400,400i,500,500i,600,600i,700,700i|Archivo:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+            </script>
+            <![endif]-->
+        <meta name="description" content="Knowledge Globe, a.k.a. KnoGlo, is a powerful tool to analyze and visualize the distribution of research interests for the selected topic and year. You can see how these research interests distributed by subjects, keywords, countries, publishers, and publication types.">
+    </head>
+
+    <body>
+        <nav>
+<!--            <strong>Knowledge Globe</strong> / dataset preview (beta) / how we do it? / update history / blog / contact us-->
+            <ul>
+                <li><a href="index.html"><img src="assets/KnoGlo.png" class="icon" width=100></a></li>
+                <li><strong><a href="visualizations.html">visualizations</a></strong></li>
+                <li><a href="how-this-works.html">how this works?</a></li>
+                <li><a href="dataset-examples.html">dataset examples</a></li>
+                <li><a href="source-codes.html">source codes</a></li>
+                <li><a href="our-vision.html">our vision</a></li>
+                <li><a href="contact-us.html">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="page">
+            <h1 class="large-title">
+                Telling stories.<br>Intuitively.
+            </h1>
+            <p>
+                Once we have the data, we can visualize it as graphs, which could tell you the results in an intuitive way, and even tell you stories in a selected time and space.
+            </p>
+            <hr>
+            <p class="paragraph-head">
+                We are using <strong class="extreme-highlight">R programming language</strong> for data visualization. With R, you can generate different kinds of graphs for your datasets, like bar plot, or rbokeh.
+            </p>
+            <p><a href="https://www.r-project.org/about.html">Learn more about R</a>, one of the most wide-used programming language for data science.</p>
+<!--
+            <dir class="numbers-group">
+                <dir class="number-and-caption">
+                    <p class="number"><strong>A.D. 1636</strong></p>
+                    <p class="number-caption">Harvard University is the oldest university in the United States, established in the year 1636.</p>
+                </dir>
+                <dir class="number-and-caption">
+                    <p class="number"><strong>≈ 5,300</strong></p>
+                    <p class="number-caption">As of 2015, there are 5,300 colleges and universities in the United States.</p>
+                </dir>
+            </dir>
+-->
+            <h2>
+                Say you are asking...
+            </h2>
+            <p class="dialogue">
+                "For which <strong>subject</strong>, researchers show more interests in the field of <strong>computer</strong> in the year <strong>2013</strong>?"
+            </p>
+            <p>
+                We can easily visualize this in a <strong>bar plot</strong>:
+            </p>
+            <img class="centered-images" src="source-code/Statistical-Metadata-Visualization/Analysis-and-Visualization/bar%20plot,%20computer,%202013,%20subject.png">
+            <p>As we can see, for all publications in the Springer Nature database about <strong style="color: #009eb3">computers</strong> around the world in 2013, <strong>"computer science"</strong> and <strong>"artificial intelligence"</strong> are the most popular terms as subjects, and researchers show more interests on these as focuses.</p>
+            <p>We can even generate interactive graphs using <strong>rbokeh</strong>.</p>
+            <p class="dialogue">
+                "In which <strong>country</strong>, researchers show more interests in the field of <strong>digital media</strong> in the year <strong>2017</strong>?"
+            </p>
+            <p><a href="source-code/Analysis-and-Visualization/digital%20arts%202017%20swap%20x%20and%20y%20legend%20transparent.html">See this visualization</a> in rbokeh. This is an interactive graph exported in HTML format. You can move your mouse on data points to see more details.</p>
+            <p>More examples are available in our GitHub's page.</p>
+            <button class="highlight-button centered" onclick="location.href='https://github.com/JunshuTedLiu/KnowledgeGlobe/tree/master/source-code/Analysis-and-Visualization'">see more visualizations on GitHub</button>
+            <p>Also, take a look at KnoGlo's <a href="https://github.com/JunshuTedLiu/KnowledgeGlobe/blob/master/source-code/Analysis-and-Visualization/Knowledge_Globe.R">R</a> code to experiment on how to make these visualizations in action.</p>
+            <hr>
+        </div>
+    </body>
+    
+    <footer>
+        &copy; 2018-2019 Knowledge Globe. All rights reserved.
+        <br>
+        <a href="https://www.junshuliu.com">Junshu Liu</a>,
+        <a href="http://tharsen.net">Jeffrey R. Tharsen</a>, <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.
+        <hr>
+        <a href="contact-us.html">Contact Us</a>
+    </footer>
+</html>

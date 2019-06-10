@@ -1,148 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <title>Knowledge Globe</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow:400,400i,500,500i,600,600i,700,700i|Archivo:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--[if lt IE 9]>
-                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-                </script>
-                <![endif]-->
-        <meta name="description" content="Knowledge Globe, a.k.a. KnoGlo, is a powerful tool to analyze and visualize the distribution of research interests for the selected topic and year. You can see how these research interests distributed by subjects, keywords, countries, publishers, and publication types.">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Additional stylesheet link goes here -->
+    <link rel="stylesheet" type="text/css" href="/css/boot.css">
+    <title>Knowledge Globe</title>
 
-    <body>
-        <nav>
-            <!--            <strong>Knowledge Globe</strong> / dataset preview (beta) / how we do it? / update history / blog / contact us-->
-            <ul>
-                <li><a href="index.html"><img src="assets/KnoGlo.png" class="icon" width=100></a></li>
-                <li><a href="visualizations.html">visualizations</a></li>
-                <li><a href="how-this-works.html">how this works?</a></li>
-                <li><a href="dataset-examples.html">dataset examples</a></li>
-                <li><a href="source-codes.html">source codes</a></li>
-                <li><a href="our-vision.html">our vision</a></li>
-                <li><a href="contact-us.html">contact us</a></li>
+    <script>
+        $(document).ready(function() {
+            $(".dropdown-toggle").dropdown();
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
+            <img src="/assets/knoglo2white.png" class="align-top" style="width: 70px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                    <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#schedule" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Statistical Metadata Visualization</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="stat-metadata-visual/how-to-use.html">How to Use?</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/case-studies.html">Visualization Case Studies</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/implementation.html">Implementation &amp; Source Code</a>
+                        <a class="dropdown-item" href="stat-metadata-visual/try-online.html">Web Version</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#schedule" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Corpus Generator &amp; NLP Analysis</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="corpus-and-NLP/how-to-use.html">How to Use?</a>
+                        <a class="dropdown-item" href="corpus-and-NLP/case-studies.html">Case Studies</a>
+                        <a class="dropdown-item" href="corpus-and-NLP/implementation.html">Implementation &amp; Source Code</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="who-cares.html">Who Cares?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-knoglo.html">About KnoGlo</a>
+                </li>
             </ul>
-        </nav>
-        <div class="page">
-            <img src="assets/KnowledgeGlobe.png" class="logo" style="padding-top: 25pt;  padding-bottom: 25pt" width=500>
-            <h1 class="large-title">
-                See how researchers around the world leading the evolution of knowledge.<br>No matter when and where.
-            </h1>
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        </div>
+    </nav>
 
+    <div class="jumbotron jumbotron-fluid" style="margin-top: 140px; background-color: #ffffff">
+        <div class="container text-center">
 
-            <!--
-        <label for="numberInput">Enter Number Code:</label><input type="text" id="numberInput" />
-        <input type="button" value="Enter" id="enter" />
-    -->
+            <!--            <img src="assets/knowledgeglobe2.png" style="width: 50%;">-->
+            <img src="assets/knowledgeglobe2.png" class="w-50 mb-2">
+            <p class="h4 text-center">See how scholars around the world leading the evolution of knowledge.</p>
+            <!--            <div class="d-inline">-->
+            <p class="lead">Powered by <img src="assets/springernature-logo.png" style="width:190px"></p>
+            <p>Available June 2019</p>
+            <p class="small">Preview available 6.10.2019. Paper available before 6.14.2019.</p>
+            <!--            </div>-->
+
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <blockquote class="blockquote">
+                <p class="text-center"><em>Scientia potentia est.</em></p>
+            </blockquote>
+            <p class="lead">The world is changing with the evolution of knowledge. Scholars and researchers from all around the globe put their effort on making innovative changes and delivering impacts to this world. Moreover, these scholars and their research progress lead to the evolution of knowledge that becomes essential parts of world history. That is why people think that <strong>scholar</strong> could be one great perspective of looking at the change of history.</p>
+
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #3100CF; color: white">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <p>By building a data analysis and visualization tool, people can now take a macroscopical view of a topic and its popularity even in a specific range of observation attributes, such as time, location, and subcategories. Besides, by creating a corpus generator and an NLP analysis tool, users can take a microscopical observation from the content of the academic publications. These two powerful tools as a bundle are named as <i>Knowledge Globe</i> (abbreviated as “KnoGlo”) because they are powered by a database that contains scholar data from all around the world.</p>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #ffffff">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <p class="lead"><strong>Knowledge Globe</strong> is a series of tools that can achieve the goal mentioned above. It contains two major parts - a statistical data visualization tool, and a corpus generator along with an NLP analysis tool.</p>
+            <p>The data visualization tool allows users to analyze and visualize statistical metadata of online publications from Springer Nature, a global scientific publisher of books and journals, in order to show the number of documents that were published under specific ranges of observations, which can be understood as filters, includes subjects, keyword tags, country, publisher, year, and publication type. By looking at those statistics, users can see the popularities of scientific topics in multiple observation perspective, like what gains more attention in a specific range of time or space.</p>
+            <p>The corpus generator and NLP tool allows users to create a corpus of the titles and abstracts of the populations with selected filters, and help them to take an in-depth look at the contents from their corpus by using NLP research techniques including Topic Modeling.</p>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>What KnoGlo can answer...</h2>
+            <p class="lead">KnoGlo will give you a statistical result about a topic that you are interested in, within a range of place (country) and/or time (years).</p>
             <hr>
-            <h2>
-                NEW!
-            </h2>
-            <h1>
-                Introducing KnoGlo 2.0 - works directly on the web page.
-            </h1>
-            <p>KnoGlo 2.0 is an XML-based web application. While KnoGlo 2.0 is under construction, you can enter your API key and keyword to see the raw XML output.</p>
-
-            <label for="APIInput">Your API Key:</label><input type="text" id="APIInput" />
-
-            <label for="keywordInput">Your Keyword:</label><input type="text" id="keywordInput" />
-
-            <input type="button" value="See XML output" id="enter" />
-            <hr style="margin-top: 20px">
-
-            <script>
-                $(document).ready(function() {
-
-                    $("#enter").click(function() {
-                        window.location = "http://myanimelist.net/anime/" + $("#numberInput").val();
-                        window.location = "http://api.springer.com/metadata/PAM?api_key=" + $("#APIInput").val() + "&q=keyword%3A" + $("#keywordInput").val() + "&s=1&p=10";
-                    });
-
-                });
-
-            </script>
-            <p>
-                We present a new way to see how knowledge evolves by looking at what researchers around the world put their effort on specific industries in a range of time.
-            </p>
-            <p>
-                By looking for what people were thinking and doing academically and professionally, we could observe the evolution in specific areas of study, and even how this world changes from a global and historical perspective.
-            </p>
-            <hr>
-            <p class="paragraph-head">
-                <strong>Introducing <strong class="extreme-highlight">Knowledge Globe </strong>(KnoGlo),</strong> a powerful tool to <strong>analyze and visualize</strong> the distribution of research interests for the selected topic and year. You can see how these research interests distributed by <strong>subjects, keywords, countries, publishers, and publication types.</strong>
-            </p>
-            <!--
-                <dir class="numbers-group">
-                    <dir class="number-and-caption">
-                        <p class="number"><strong>A.D. 1636</strong></p>
-                        <p class="number-caption">Harvard University is the oldest university in the United States, established in the year 1636.</p>
-                    </dir>
-                    <dir class="number-and-caption">
-                        <p class="number"><strong>≈ 5,300</strong></p>
-                        <p class="number-caption">As of 2015, there are 5,300 colleges and universities in the United States.</p>
-                    </dir>
-                </dir>
-    -->
-            <h2>
-                If you ask...
-            </h2>
+            <p>For example,</p>
             <ul>
                 <li>"In which country, researchers show more interests and put efforts on the field of the Internet?"</li>
                 <li>"In the United States, when did Social Media start to be mentioned in publications?"</li>
                 <li>"How many articles about LGBTQ was published, compare with 1965 and 2015?"</li>
                 <li>"What kind of specific topics (subjects/keywords) do researchers focused on in the field of digital media in 2017?"</li>
             </ul>
-            <p>
-                KnoGlo will answer your question in an intuitive way by delivering several types of <strong>data visualizations</strong>.
-            </p>
-            <hr>
-            <h2>Where are the data come from?</h2>
-            <p>
-                Our tool is able to gather information from <strong>Springer Nature</strong>, which is one of the world's leading scholar database.
-            </p>
-            <p class="paragraph-head">
-                Powered by <strong class="extreme-highlight">Springer Nature metadata API</strong> that provides <strong>metadata for academic and professional publications,</strong> we could access 12 million online documents, including journal articles, book chapters, and protocols.
-            </p>
-            <p>
-                Using these data, we could analyze the statistic information about how many articles published in selected topic and time ranges.
-            </p>
-            <hr>
-            <h2 class="h2-mid-text">TOOLS WE USED</h2>
-            <dir class="numbers">
-                <dir class="number-and-caption centered-numbers">
-                    <p class="number"><strong>Python</strong></p>
-                    <p class="number-caption">For both gathering data from Springer and making datasets in CSV format.</p>
-                </dir>
-                <dir class="number-and-caption centered-numbers">
-                    <p class="number"><strong>LibreOffice</strong></p>
-                    <p class="number-caption">Merge multiple datasets into one for specific uses.</p>
-                </dir>
-                <dir class="number-and-caption centered-numbers">
-                    <p class="number"><strong>R</strong></p>
-                    <p class="number-caption">Create graphs for data visualization and publication in rbokeh.</p>
-                </dir>
-            </dir>
-            <p>How exactly do we implement? <a href="how-this-works.html">See in action.</a></p>
-            <hr>
-            <p class="paragraph-head">
-                By observing the history of academics and <strong>see how researchers from all over the world drive the development of everything and making impacts,</strong> KnoGlo will help us to <strong>make predictions, observe today's changing world, and shape our future.</strong>
-            </p>
-            <button class="highlight-button centered" onclick="location.href='visualizations.html'">visualization examples</button>
-        </div>
-    </body>
 
-    <footer>
-        &copy; 2018 Knowledge Globe. All rights reserved.
-        <br>
-        <a href="https://www.junshuliu.com">Junshu Liu</a>,
-        <a href="http://tharsen.net">Jeffrey R. Tharsen</a>, <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.
-        <hr>
-        <a href="contact-us.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f2f2f2">
+        <div class="container">
+            <!--            <h1 class="display-4">An exciting final week.</h1>-->
+            <!--            <hr class="my-2">-->
+            <h2>Where are the data come from?</h2>
+            <p class="lead">Standing on the shoulder of giants.</p>
+            <hr>
+            <p>Our tool is able to gather information from Springer Nature, which is one of the world’s leading scholar database.</p>
+            <p>Powered by Springer Nature metadata API that provides metadata for academic and professional publications, we could access 12 million online documents, including journal articles, book chapters, and protocols.</p>
+            <p>Using KnoGlo with the help of Springer Nature’s massive database, we could analyze the statistic information about how many articles published in selected topic and time ranges.</p>
+        </div>
+    </div>
+
+    <footer class="bg-footer text-white p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col small">
+
+
+                    <!--                    <img src="assets/knowledgeglobe2white.png" class="align-top" style="width: 200px;">-->
+                    <span>&copy; 2018-2019 Knowledge Globe. All rights reserved.</span>
+                    <br>
+                    <span>Created by <a href="https://junshuliu.com">Junshu Liu</a>. Advised by <a href="https://ochre.uchicago.edu/directory/david-schloen">David Schloen</a>, <a href="http://tharsen.net/">Jeffrey Tharsen</a>, and <a href="https://ochre.uchicago.edu/directory/miller-prosser">Miller Prosser</a>.</span>
+                </div>
+
+
+            </div>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Additional JS goes here -->
+</body>
 
 </html>

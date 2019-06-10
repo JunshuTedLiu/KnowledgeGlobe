@@ -1,0 +1,26 @@
+UPDATE LOG
+----------
+
+v2.0.0
+06/09/2019
+
+- First release for v2.0! Ready for the thesis project.
+- Statistical Metadata Visualization tool
+	- Create files in a new folder named by your constraints.
+	- New tool that you can filter by only keyword.
+	- Web version now available
+- Corpus Generator & NLP Analysis
+	- Updated NLP tool
+	- Create corpus in a new directory with a name of your choice.
+	- Create text files for your corpus named by your constraints.
+
+v2.0.0 beta 1
+03/23/2019
+
+- Add NLP tool
+- Add the web tool preview
+
+v1.0.0
+12/14/2018
+
+- Initial Release
