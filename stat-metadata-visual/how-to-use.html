@@ -23,7 +23,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
         <a class="navbar-brand" href="../index.html">
             <!--                    instead of link to index.html, use # for just jumping back to the top of the page.-->
-            <img src="../assets/knoglo2white.png" class="align-top" style="width: 70px;">
+            <img src="../assets/KnoGlo2white.png" class="align-top" style="width: 70px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -128,16 +128,16 @@
             <p>KnoGlo includes a visualization tool in R.</p>
             <p>➊ <a href="https://www.rstudio.com/products/rstudio/download/">Download</a> RStudio. You just need the FREE version of RStudio Desktop with Open Source License. Install it on your computer</p>
             <p>➋ Go to the "source-code/Statistical-Metadata-Visualization/Python-and-R" folder. Open the visualization tool, "KnoGlo-Visualization.R", in RStudio.</p>
-            <p>➌ Look at line 1. Set the directory to the folder that includes the dataset files that you want to visualize. Just type that folder name. For example,</p>
+            <p>➌ Look at line 7. Set the directory to the folder that includes the dataset files that you want to visualize. Just type that folder name. For example,</p>
             <p><code>setwd("keyword_computer_year_1988")</code></p>
             <p class="small">When you opened this R tool, RStudio will automatically load the workspace from the current folder "Python-R" where this R tool is located, which is the same folder where all your datasets folders are being saved.</p>
-            <p> Run line 1.
-            <p>➍ Now, run line 8 to 13 to store all information from your dataset to these six variables.</p>
-            <p>➎ Run line 15. It will ask you the keyword that you've used for your datasets. Input the exact same keyword here.</p>
-            <p>➏ If applicable, run line 18. It will ask you the year. Input the same thing. If you don't have a year constraint, you can type something like "all time" or "anytime", so the titles in the visualization will looks better, such as "Subjects of publications about medicine <strong>in</strong> anytime".</p>
-            <p>➐ Now, you are ready to visualize! Run line 26 to see a bar plot of the subjects of publications about your keyword (in a year range, if applicable). Here is an example:</p>
+            <p> Run line 7.
+            <p>➍ Now, run line 11 to 16 to store all information from your dataset to these six variables.</p>
+            <p>➎ Run line 18. It will ask you the keyword that you've used for your datasets. Input the exact same keyword here.</p>
+            <p>➏ If applicable, run line 21. It will ask you the year. Input the same thing. If you don't have a year constraint, you can type something like "all time" or "anytime", so the titles in the visualization will looks better, such as "Subjects of publications about medicine <strong>in</strong> anytime".</p>
+            <p>➐ Now, you are ready to visualize! Run line 29 to see a bar plot of the subjects of publications about your keyword (in a year range, if applicable). Here is an example:</p>
             <img src="../source-code/Statistical-Metadata-Visualization/Python-and-R/keyword_computer_year_1988/subject-plot.png" class="w-75 mb-3">
-            <p>➑ Before you run line 29 <code>dev.off</code>, don't forget to save your bar plot by pressing the "export" button on the top of the graph view. You can save it in PDF or as an image.</p>
+            <p>➑ Before you run line 32 <code>dev.off</code>, don't forget to save your bar plot by pressing the "export" button on the top of the graph view. You can save it in PDF or as an image.</p>
             <p>Same thing, run the rest of codes for other constraints.</p>
             <p>Have fun visualizing!</p>
         </div>
