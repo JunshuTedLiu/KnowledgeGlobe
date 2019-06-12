@@ -23,7 +23,7 @@ yearInput
 
 # Visualizations
 
-# 0. subject
+# 1. subject
 
 # Bar Plot
 par(mar=c(12,4,4,1)) # apply margins since the name will be so long
@@ -43,7 +43,7 @@ lbls <- paste(lbls, pct) # add percents to labels
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)), main=c("Subjects of publications about ", keywordInput, " in ", yearInput))
 
-# 1. keyword
+# 2. keyword
 
 # Bar Plot
 xcor1 <- barplot(keyword$count, main = c("Keywords of publications about ", keywordInput, " in ", yearInput), names.arg=c(keyword$value), las = 2)
@@ -59,17 +59,17 @@ lbls1 <- paste(lbls1, pct1) # add percents to labels
 lbls1 <- paste(lbls1,"%",sep="") # ad % to labels
 pie(slices1,labels = lbls1, col=rainbow(length(lbls1)), main=c("Keywords of publications about ", keywordInput, " in ", yearInput))
 
-# 2. pub
+# 3. pub
 barplot(pub$count, main = c("Publishers of the journals about ", keywordInput, " in ", yearInput), names.arg=c(pub$value), col=rainbow(20, start=.7, end=.1), las = 2, cex.names = 0.9)
 
-# 3. year (total)
+# 4. year (total)
 year$count
 barplot(year$count, main = c("Quantities of publications about ", keywordInput, " for each year"), names.arg=c(year$value), las = 2)
 
-# 4. country
+# 5. country
 barplot(country$count, main = c("Quantities of publications about ", keywordInput, " for each countries in ", yearInput), names.arg=c(country$value), las = 2)
 
-# 5. type
+# 6. type
 slices2 <- c(type$count)
 lbls2 <- c(type$value)
 pct2 <- round(slices2/sum(slices2)*100)
@@ -83,15 +83,15 @@ dev.off()
 # (Need to fix the margin problem)
 par(mfrow = c(2,2))
 # be sure to run the code above.
-# 0. subject
+# 1. subject
 xcor <- barplot(subject$count, main = paste("Subjects of publications about", keywordInput, "in", yearInput), names.arg=c(subject$value), las = 2, cex.names = 0.6)
 text(x = xcor, y = subject$count, label = subject$count, pos = 3, cex = 0.8, col = "red")
-# 1. keyword
+# 2. keyword
 xcor1 <- barplot(keyword$count, main = c("Keywords of publications about ", keywordInput, " in ", yearInput), names.arg=c(keyword$value), las = 2)
 text(x = xcor1, y = keyword$count, label = keyword$count, pos = 3, cex = 0.8, col = "red")
-# 2. pub
+# 3. pub
 barplot(pub$count, main = c("Publishers of the journals about ", keywordInput, " in ", yearInput), names.arg=c(pub$value), col=rainbow(20, start=.7, end=.1), las = 2, cex.names = 0.9)
-# 4. country
+# 5. country
 barplot(country$count, main = c("Quantities of publications about ", keywordInput, " for each countries in ", yearInput), names.arg=c(country$value), las = 2)
 
 dev.off()
@@ -102,14 +102,18 @@ dev.off()
 # Learn more at http://hafen.github.io/rbokeh
 # install.packages("rbokeh")
 library(rbokeh)
-p <- figure(width = 1000, height = 600) %>%
-  ly_points(value, count, data = country,
-            color = value, glyph = value,
-            hover = list(value, count)) %>%
-  x_axis(angle = 45)
-p
+
+# country
+# p <- figure(width = 1000, height = 600) %>%
+#   ly_points(value, count, data = country,
+#             color = value, glyph = value,
+#             hover = list(value, count)) %>%
+#   x_axis(angle = 45)
+# p
 
 # this looks better. I swapped the x and y axis.
+
+# country
 p1 <- figure(width = 1000, height = 600) %>%
   ly_points(count, value, data = country,
             color = value, glyph = value,
