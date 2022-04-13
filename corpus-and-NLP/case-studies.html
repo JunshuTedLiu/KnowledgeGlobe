@@ -76,7 +76,7 @@
         <div class="container" style="">
         <h2 class="display-2">Case Studies.</h2>
 <!--        <hr>-->
-            <p class="lead">See KnoGlo's corpus generator and NLP analysis tool in action, and what those results mean to us.</p>
+            <p class="lead">See KnoGlo’s corpus generator and NLP analysis tool in action and what those results mean to us.</p>
 
     </div>
     </div>
@@ -89,20 +89,20 @@
         <div class="container">
             <!--            <h1 class="display-4">An exciting final week.</h1>-->
             <!--            <hr class="my-2">-->
-            <h2>Example 1. See how the Internet evolves in the past 50 years.</h2>
-            <p class="lead">Keyword "Internet", "ARPANET", and other related. Year from 1969 to 2019. 5 years as a gap.</p>
+            <h2>Example 1. See how the Internet has evolved in the past 50 years.</h2>
+            <p class="lead">Keywords: <span class="text-monospace">Internet</span>, <span class="text-monospace">ARPANET</span>, and other related. Year: from <span class="text-monospace">1969</span> to <span class="text-monospace">2019</span>. 5 years as a gap.</p>
             <hr>
             <h5>Generating Corpus</h5>
             <p>There are 55 text documents inside the <a href="https://github.com/JunshuTedLiu/KnowledgeGlobe/tree/master/source-code/Corpus-Generator-and-NLP/Corpus%20Examples/Corpus%20Example%201%20-%20Computer%20and%20Internet">corpus</a>. For each document, there are up to 50 titles and abstracts about a selected topic published in a specific year.</p>
-            <p>For this research, I picked several keywords and a time range of 1969-2019 (5 years as a gap). Selected keywords include “Internet”, “ARPANET”, “computer network”, “computer”, and “World Wide Web”.</p>
-            <p>When I am making the corpus, I found something interesting that there are NO results for the “World Wide Web” until 1994.</p>
+            <p>For this research, I picked several keywords and a time range of 1969-2019 (5 years as a gap). Selected keywords include <span class="text-monospace">Internet</span>, <span class="text-monospace">ARPANET</span>, <span class="text-monospace">computer network</span>, <span class="text-monospace">computer</span>, and <span class="text-monospace">World Wide Web</span>.</p>
+            <p>When I was making the corpus, I found something interesting - there were NO results for the “World Wide Web” until 1994.</p>
             <h5>NLP Topic Modeling</h5>
-            <p>I did a few attempts on the number of topics. When I increased the number of topics, while the word cloud seems like could provide more results of the top N word, some of them are constantly repeating between topics. 4 topics return a fairly satisfying result in this case.</p>
+            <p>I made a few attempts on different numbers of topics. When I increased the number of topics, while the word cloud seemed like it could provide more results of the top <span class="font-italic">n</span> words, some of them are constantly repeating between topics. 4 topics return a fairly satisfying result in this case.</p>
             <p>View the complete topic modeling result with 4 topics by running <a href="https://github.com/JunshuTedLiu/KnowledgeGlobe/blob/master/source-code/Corpus-Generator-and-NLP/NLP%20Topic%20Modeling%20Example%201.ipynb">this IPYNB file</a> in Jupyter Notebook.</p>
-            <p class="small">This file has the output results for the Example 1. Do not re-run the code, or the old results will be overwritten.</p>
+            <p class="small">This file has the output results for Example 1. Do not re-run the code, or the old results will be overwritten.</p>
             <p>Note: after changing the topic number, be sure to change the row and columns for the distribution of word counts by dominant topic, word cloud, and word count &amp; importance of topic keywords to match your topic numbers (i.e., 9 topics with a 3x3 visualization).</p>
             <h5>Compare with Statistical Metadata Results</h5>
-            <p>We can compare the result of topic modeling from our corpus and the original subject and keyword tags from Springer. Although the topic modeling results might not contain everything that is included in Springer’s tags since my free API plan only allows me to get 50 titles and abstracts for each text file, we can find some topics share in common, like the “Medicine &amp; Health” subject tag correlated to the top N words, such as “protein”, “gene”, and “cell”, in one of the topics from the topic modeling result.</p>
+            <p>We can compare the result of topic modeling from our corpus and the original subject and keyword tags from Springer. Although the topic modeling results might not contain everything that is included in Springer’s tags since my free API plan only allows me to get 50 titles and abstracts for each text file, we can find some topics share in common, like the “Medicine &amp; Health” subject tag correlated to the top <span class="font-italic">n</span> words, such as <span class="text-monospace">protein</span>, <span class="text-monospace">gene</span>, and <span class="text-monospace">cell</span>, in one of the topics from the topic modeling result.</p>
         </div>
     </div>
 
@@ -111,7 +111,7 @@
             <!--            <h1 class="display-4">An exciting final week.</h1>-->
             <!--            <hr class="my-2">-->
             <h2>Example 2. Medicine in Japan.</h2>
-            <p class="lead">Keyword "medicine". Country "Japan". Year from 1989 to 2019. 5 years as a gap.</p>
+            <p class="lead">Keyword: <span class="text-monospace">medicine</span>. Country: <span class="text-monospace">Japan</span>. Year: from <span class="text-monospace">1989</span> to <span class="text-monospace">2019</span>. 5 years as a gap.</p>
             <hr>
 <!--            <p>Japan is one of the countries that is leading the medicine industry.</p>-->
             <p>Coming soon. Please check back later.</p>
